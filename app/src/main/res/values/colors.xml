@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><resources><color name="cp_background">#050B16</color><color name="cp_surface">#0C1728</color><color name="cp_surface_2">#12223A</color><color name="cp_primary">#0A84FF</color><color name="cp_primary_dark">#0066D6</color><color name="cp_cyan">#19D9FF</color><color name="cp_focus">#36E5FF</color><color name="cp_text">#F7FBFF</color><color name="cp_text_muted">#91A6C2</color><color name="cp_warning">#FFB84D</color><color name="cp_error">#FF6B6B</color><color name="black">#000000</color><color name="white">#FFFFFF</color></resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cp_background">#030914</color>
+    <color name="cp_background_2">#061426</color>
+    <color name="cp_surface">#0A1728</color>
+    <color name="cp_surface_2">#10243B</color>
+    <color name="cp_surface_3">#16314D</color>
+    <color name="cp_primary">#087CFF</color>
+    <color name="cp_primary_dark">#035CC2</color>
+    <color name="cp_cyan">#19D9FF</color>
+    <color name="cp_focus">#4DEBFF</color>
+    <color name="cp_glow">#6619D9FF</color>
+    <color name="cp_text">#F8FCFF</color>
+    <color name="cp_text_muted">#91A9C6</color>
+    <color name="cp_text_dim">#617A98</color>
+    <color name="cp_warning">#FFB84D</color>
+    <color name="cp_error">#FF6B6B</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>
