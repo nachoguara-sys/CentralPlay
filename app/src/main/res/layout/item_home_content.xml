@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="104dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@drawable/selector_card_focus">
+
+    <ImageView
+        android:id="@+id/home_poster"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_poster_placeholder"
+        android:contentDescription="Contenido" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_card_bottom_gradient" />
+
+    <TextView
+        android:id="@+id/home_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="8dp"
+        android:background="@drawable/bg_live_badge"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="EN VIVO"
+        android:textColor="#00101D"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:textColor="@color/cp_text"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:maxLines="2" />
+</FrameLayout>
