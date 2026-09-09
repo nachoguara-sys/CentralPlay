@@ -1,4 +1,4 @@
-name: Build CentralPlay APK
+name: Build CentralPlay 1.8 APK
 
 on:
   workflow_dispatch:
@@ -44,6 +44,6 @@ jobs:
       - name: Upload CentralPlay APK
         uses: actions/upload-artifact@v4
         with:
-          name: CentralPlay-1.7.0-debug-apk
+          name: CentralPlay-1.8.0-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
