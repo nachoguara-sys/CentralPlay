@@ -1,1 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/cp_background"><com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/cp_background"><com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:background="@color/cp_background" app:title="Central Play" app:titleTextColor="@color/cp_text"/></com.google.android.material.appbar.AppBarLayout><FrameLayout android:id="@+id/fragment_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="72dp" app:layout_behavior="@string/appbar_scrolling_view_behavior"/><com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/bottom_nav" android:layout_width="match_parent" android:layout_height="72dp" android:layout_gravity="bottom" android:background="@color/cp_surface" app:itemIconTint="@color/cp_text" app:itemTextColor="@color/cp_text" app:labelVisibilityMode="labeled" app:menu="@menu/bottom_nav"/></androidx.coordinatorlayout.widget.CoordinatorLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cp_background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/cp_background"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:logo="@drawable/centralplay_logo"
+        app:logoAdjustViewBounds="true"
+        app:title="CENTRAL PLAY"
+        app:titleTextColor="@color/cp_text"
+        app:subtitle="Tu entretenimiento, a tu manera"
+        app:subtitleTextColor="@color/cp_text_muted" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/cp_surface"
+        app:itemIconTint="@color/cp_nav_item"
+        app:itemTextColor="@color/cp_nav_item"
+        app:itemRippleColor="@color/cp_glow"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
