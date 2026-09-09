@@ -1,0 +1,4 @@
+package com.centralplay.app.ui;
+
+import android.app.AlertDialog;import android.content.*;import android.net.Uri;import com.centralplay.app.BuildConfig;import com.centralplay.app.model.Catalog;
+public final class AppUpdateChecker {private AppUpdateChecker(){}public static void check(Context c,Catalog catalog){if(catalog==null||catalog.appUpdate==null)return;var u=catalog.appUpdate;if(u.versionCode<=BuildConfig.VERSION_CODE||u.apkUrl==null||u.apkUrl.trim().isEmpty())return;new AlertDialog.Builder(c).setTitle("Actualización disponible").setMessage((u.message==null||u.message.trim().isEmpty()?"Hay una nueva versión de Central Play.":u.message)+"\n\nVersión: "+u.versionName).setPositiveButton("Abrir descarga",(d,w)->{try{c.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(u.apkUrl)));}catch(Exception ignored){}}).setNegativeButton("Más tarde",null).show();}}

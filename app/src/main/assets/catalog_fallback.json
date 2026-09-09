@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "version": 1,
+  "updatedAt": "demo",
+  "live": [
+    {
+      "id": "demo_mux_hls",
+      "type": "live",
+      "title": "Demo HLS · Mux",
+      "group": "Pruebas públicas",
+      "description": "Stream HLS público para comprobar reproducción adaptativa.",
+      "streamUrl": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+      "backupUrls": ["https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8"],
+      "nowTitle": "Señal de prueba HLS",
+      "nextTitle": "Prueba de fuente alternativa"
+    },
+    {
+      "id": "demo_apple_hls",
+      "type": "live",
+      "title": "Demo HLS · Apple",
+      "group": "Pruebas públicas",
+      "description": "Ejemplo oficial de streaming HLS.",
+      "streamUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_4x3/bipbop_4x3_variant.m3u8",
+      "nowTitle": "Demo BipBop"
+    }
+  ],
+  "movies": [
+    {
+      "id": "demo_big_buck_bunny",
+      "type": "movie",
+      "title": "Big Buck Bunny · Demo",
+      "description": "Video público de demostración para comprobar VOD, pausa y búsqueda.",
+      "year": "2008",
+      "rating": "Demo",
+      "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "backupUrls": ["https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"]
+    },
+    {
+      "id": "demo_elephants_dream",
+      "type": "movie",
+      "title": "Elephants Dream · Demo",
+      "description": "Segundo VOD de prueba.",
+      "year": "2006",
+      "rating": "Demo",
+      "streamUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+    }
+  ],
+  "series": [
+    {
+      "id": "demo_series",
+      "title": "Serie de prueba",
+      "description": "Temporadas y episodios de demostración usando videos públicos.",
+      "year": "2026",
+      "rating": "Demo",
+      "episodes": [
+        {"id":"demo_s1e1","season":1,"number":1,"title":"Primer episodio","description":"Prueba de episodio 1","streamUrl":"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"},
+        {"id":"demo_s1e2","season":1,"number":2,"title":"Segundo episodio","description":"Prueba de episodio 2","streamUrl":"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"}
+      ]
+    }
+  ]
+}

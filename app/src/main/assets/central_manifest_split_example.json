@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "catalog": "",
+  "liveM3u": "https://TU-SERVIDOR/live.m3u",
+  "epgXmltv": "https://TU-SERVIDOR/epg.xml",
+  "moviesJson": "https://TU-SERVIDOR/movies.json",
+  "seriesJson": "https://TU-SERVIDOR/series.json",
+  "liveBackups": ["https://BACKUP/live.m3u"],
+  "epgBackups": ["https://BACKUP/epg.xml"]
+}

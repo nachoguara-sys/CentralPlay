@@ -1,0 +1,25 @@
+{
+  "schema": 2,
+  "catalog": "https://example.org/centralplay/catalog.json",
+  "catalogBackups": ["https://backup.example.org/centralplay/catalog.json"],
+  "liveM3u": "",
+  "liveBackups": [],
+  "epgXmltv": "",
+  "epgBackups": [],
+  "moviesJson": "",
+  "seriesJson": "",
+  "network": {
+    "apiNodes": ["https://api.example.org", "https://api-backup.example.org"],
+    "webSocketNodes": ["wss://realtime.example.org/socket", "wss://realtime-backup.example.org/socket"],
+    "healthPath": "/health",
+    "playlistPath": "/api/v1/content/playlist",
+    "userAgent": "CentralPlay/1.0",
+    "connectTimeoutSeconds": 10,
+    "readTimeoutSeconds": 20,
+    "pingIntervalSeconds": 30,
+    "baseReconnectSeconds": 3,
+    "maxReconnectSeconds": 60,
+    "nodeCooldownSeconds": 30,
+    "publicHeaders": {}
+  }
+}

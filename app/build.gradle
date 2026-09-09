@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.centralplay.app'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.centralplay.app'
+        minSdk 23
+        targetSdk 36
+        versionCode 170
+        versionName '1.7.0'
+
+        buildConfigField 'String', 'DEFAULT_MANIFEST_URL', '""'
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig true
+        viewBinding false
+    }
+
+    packaging {
+        resources {
+            excludes += ['/META-INF/{AL2.0,LGPL2.1}', 'META-INF/DEPENDENCIES']
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.16.0'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.activity:activity:1.10.1'
+    implementation 'androidx.fragment:fragment:1.8.8'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.work:work-runtime:2.10.2'
+    implementation 'com.google.android.material:material:1.12.0'
+
+    implementation 'androidx.media3:media3-exoplayer:1.11.0'
+    implementation 'androidx.media3:media3-exoplayer-hls:1.11.0'
+    implementation 'androidx.media3:media3-ui:1.11.0'
+    implementation 'androidx.media3:media3-datasource-okhttp:1.11.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.google.code.gson:gson:2.11.0'
+
+    testImplementation 'junit:junit:4.13.2'
+}
