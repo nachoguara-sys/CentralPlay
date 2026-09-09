@@ -1,1 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/cp_background"><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp"><ImageView android:layout_width="96dp" android:layout_height="96dp" android:layout_gravity="center_horizontal" android:src="@drawable/centralplay_logo" android:contentDescription="Central Play"/><TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="CENTRAL PLAY" android:textColor="@color/cp_text" android:textStyle="bold" android:textSize="28sp" android:gravity="center"/><TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/central_play_tagline" android:textColor="@color/cp_text_muted" android:textSize="15sp" android:gravity="center" android:layout_marginBottom="24dp"/><com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/cp_surface" app:cardCornerRadius="16dp"><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Estado del catálogo" android:textColor="@color/cp_text" android:textStyle="bold" android:textSize="17sp"/><TextView android:id="@+id/status_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Cargando…" android:textColor="@color/cp_text_muted" android:layout_marginTop="8dp"/><TextView android:id="@+id/counts_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/cp_text" android:layout_marginTop="12dp"/></LinearLayout></com.google.android.material.card.MaterialCardView><TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Catálogo remoto, M3U, EPG, películas y series. Sin configuración usa fuentes públicas de demostración." android:textColor="@color/cp_text_muted" android:textSize="14sp" android:layout_marginTop="18dp"/></LinearLayout></ScrollView>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/cp_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="245dp">
+
+            <ImageView
+                android:id="@+id/img_hero_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_poster_placeholder"
+                android:contentDescription="Destacado" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_hero_gradient" />
+
+            <LinearLayout
+                android:layout_width="390dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingStart="28dp"
+                android:paddingEnd="24dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_logo_chip"
+                    android:padding="7dp">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/centralplay_logo"
+                        android:contentDescription="Central Play" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="CENTRAL PLAY"
+                        android:textColor="@color/cp_text"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_hero_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_live_badge"
+                    android:text="DESTACADO"
+                    android:textColor="#00101D"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_hero_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Central Play"
+                    android:textColor="@color/cp_text"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:maxLines="2" />
+
+                <TextView
+                    android:id="@+id/txt_hero_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Contenido destacado"
+                    android:textColor="@color/cp_text_muted"
+                    android:textSize="13sp"
+                    android:maxLines="2" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="9dp"
+            android:text="Cargando catálogo…"
+            android:textColor="@color/cp_text_dim"
+            android:textSize="11sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingBottom="26dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
